@@ -7,6 +7,7 @@
 	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
 	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
 	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="logo" class="java.lang.String"/>
 	<queryString language="SQL">
 		<![CDATA[SELECT sakila.film.film_id,
 	sakila.actor.first_name,
@@ -64,7 +65,7 @@ FROM sakila.film_actor
 					<textElement textAlignment="Right">
 						<font isBold="true"/>
 					</textElement>
-					<textFieldExpression><![CDATA[DATEFORMAT($F{release_year}, "yyyy")]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{release_year}]]></textFieldExpression>
 				</textField>
 			</band>
 		</groupHeader>
@@ -80,7 +81,7 @@ FROM sakila.film_actor
 		<band height="575" splitType="Stretch">
 			<image vAlign="Bottom">
 				<reportElement positionType="Float" x="-20" y="66" width="105" height="409" uuid="64ca4020-b604-4de9-9ed1-921b74cfd593"/>
-				<imageExpression><![CDATA["waves.jpg"]]></imageExpression>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 			<frame>
 				<reportElement mode="Opaque" x="-20" y="475" width="105" height="100" backcolor="#666666" uuid="6eb7cb61-0dd7-47a8-8475-5fa6c3a348dc"/>

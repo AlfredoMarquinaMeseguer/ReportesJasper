@@ -28,13 +28,13 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException, JRException, ClassNotFoundException, SQLException {
-//        scene = new Scene(loadFXML("primary"), 640, 480);
-//        stage.setScene(scene);
-//        stage.show();
-        ReportViewer reportViewer = new ReportViewer();
-        Scene scene = new Scene(reportViewer, 800, 600);
+        scene = new Scene(loadFXML("primary"), 640, 480);
         stage.setScene(scene);
         stage.show();
+//        ReportViewer reportViewer = new ReportViewer();
+//        Scene scene = new Scene(reportViewer, 800, 600);
+//        stage.setScene(scene);
+//        stage.show();
 //        try {
 ////        Class.forName("com.mysql.jdbc.Driver");
 //
